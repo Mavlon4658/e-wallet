@@ -1,11 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
-import Auth from '../auth/Auth.vue';
+import AuthIndex from '../auth/Index.vue';
+import Auth from '../auth/Auth.vue'
+import Register from '../auth/Register.vue'
+import LogIn from '../auth/LogIn.vue'
 
 const routes = [
-    { path: '/', component: Home },
+    { 
+        path: '/', 
+        name: "Home",
+        component: Home 
+    },
     {
-        path: '/auth', component: Auth
+        path: '/auth', 
+        name: 'Auth',
+        component: AuthIndex,
+        children: [
+            {path: '', name: "AuthIn", component: Auth},
+            {path: 'login', name: "LogIn", component: LogIn},
+            {path: 'register', name: "Register", component: Register}
+        ]
     }
 ]
 
