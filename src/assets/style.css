@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1B1B1B;
+  color: white;
+}
+
+button {
+  display: block;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+a {
+  display: block;
+  color: inherit;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.main_btn {
+  border-radius: 16px;
+  background: #C7FF24;
+  padding: 16px;
+  max-width: 100%;
+  color: #262329;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+.main_btn:hover {
+  background: #E1CB0A;
+}
+.main_btn:active {
+  background: #CDB700;
+}
+
+.link_text {
+  color: #C7FF24;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  text-decoration: none;
+}
+.link_text:hover {
+  color: #E1CB0A;
+}
+.link_text:active {
+  color: #CDB700;
+}
+
+.phone_input_wrapper {
+  position: relative;
+  max-width: 335px;
+}
+.phone_input_wrapper .phone_input {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #E3E5E5;
+  background: #FFF;
+  display: flex;
+  height: 54px;
+  gap: 16px;
+  align-items: center;
+  padding: 0px 16px;
+}
+.phone_input_wrapper .phone_input button {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  padding: 16px 0;
+}
+.phone_input_wrapper .phone_input button img {
+  width: 20px;
+}
+.phone_input_wrapper .phone_input button span {
+  color: #090A0A;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  width: 40px;
+  text-align: center;
+}
+.phone_input_wrapper .phone_input input {
+  background: transparent;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-left: 106px;
+  color: #090A0A;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+.phone_input_wrapper .phone_input input::-moz-placeholder {
+  color: #72777A;
+}
+.phone_input_wrapper .phone_input input::placeholder {
+  color: #72777A;
+}
+.phone_input_wrapper .countries_wrapper {
+  border-radius: 8px;
+  background: #FFF;
+  position: absolute;
+  height: 0;
+  margin-top: 5px;
+  overflow: hidden;
+  transition: 0.3s ease all;
+  width: 100%;
+}
+.phone_input_wrapper .countries_wrapper .country_search {
+  border: 1px solid #E3E5E5;
+  width: calc(100% - 30px);
+  margin: 15px 15px 10px;
+  padding: 10px;
+  border-radius: 8px;
+  color: #090A0A;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+.phone_input_wrapper .countries_wrapper .country_search::-moz-placeholder {
+  color: #72777A;
+}
+.phone_input_wrapper .countries_wrapper .country_search::placeholder {
+  color: #72777A;
+}
+.phone_input_wrapper .countries_wrapper .countries {
+  overflow-y: scroll;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  padding-left: 5px;
+}
+.phone_input_wrapper .countries_wrapper .countries::-webkit-scrollbar {
+  width: 5px;
+}
+.phone_input_wrapper .countries_wrapper .countries::-webkit-scrollbar-track {
+  background: transparent;
+}
+.phone_input_wrapper .countries_wrapper .countries::-webkit-scrollbar-thumb {
+  background: #bcbcbc;
+  border-radius: 10px;
+}
+.phone_input_wrapper .countries_wrapper .countries button {
+  width: 100%;
+  text-align: left;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.phone_input_wrapper .countries_wrapper .countries button:hover {
+  background: #E3E5E5;
+}
+.phone_input_wrapper .countries_wrapper .countries button img {
+  width: 30px;
+}
+.phone_input_wrapper .countries_wrapper .countries button span {
+  color: #090A0A;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+.phone_input_wrapper .countries_wrapper .countries button.active {
+  background: #E3E5E5;
+}
+.phone_input_wrapper .countries_wrapper.active {
+  height: 400px;
+  border: 1px solid #E3E5E5;
+}
+
+.auth_wrapper {
+  max-width: 1206px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 23px;
+  margin: 0 auto;
+  height: calc(100vh - 30px);
+  display: flex;
+  gap: 25px;
+  position: relative;
+  align-items: stretch;
+}
+.auth_wrapper .auth_content {
+  width: calc(50% - 13.5px - 12.5px);
+  position: relative;
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid #312C35;
+  background: #1B1B1B;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.auth_wrapper .auth_content .auth_title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.auth_wrapper .auth_content .auth_title span {
+  color: #C7FF24;
+  font-family: "Rubik", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.88px;
+}
+.auth_wrapper .auth_content .auth_in {
+  text-align: center;
+}
+.auth_wrapper .auth_content .auth_in img {
+  margin: 96px auto 78px;
+}
+.auth_wrapper .auth_content .auth_in .title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  max-width: 335px;
+  margin: 0px auto 32px;
+}
+.auth_wrapper .auth_content .auth_in .main_btn {
+  max-width: 335px;
+  margin-bottom: 32px;
+}
+.auth_wrapper .auth_content .auth_in .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.auth_wrapper .auth_content .auth_in .text span {
+  color: #FFF;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+.auth_wrapper .auth_content .log_in .title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+  letter-spacing: 0.4px;
+  margin: 50px auto 30px;
+}
+.auth_wrapper .auth_content .log_in .text {
+  color: #6C7072;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 13px auto 50px;
+  max-width: 327px;
+  margin-right: 8px;
+}
+.auth_wrapper .auth_content .log_in .main_btn {
+  width: 335px;
+}
+.auth_wrapper .auth_bg {
+  width: calc(50% - 11.5px - 12.5px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+
+.main_container {
+  max-width: 1150px;
+  padding: 0 10px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
