@@ -1764,7 +1764,7 @@
         "code": "+998",
         "iso": "UZ",
         "flag": "https://cdn.kcak11.com/CountryFlags/countries/uz.svg",
-        "mask": "##-###-####"
+        "mask": "##-###-##-##"
     },
     {
         "name": "Vanuatu",

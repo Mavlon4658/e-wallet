@@ -1,12 +1,22 @@
 <template>
-    <button class="main_btn">{{title}}</button>
+    <button 
+        @click="$emit('btnClick')" 
+        :class="`main_btn ${disabled ? 'main_btn_disabled' : ''}`"
+        :disabled="disabled"
+    >
+        {{title}}
+    </button>
 </template>
 
 <script>
 export default {
     name: "Button",
     props: {
-        title: String
+        title: String,
+        disabled: {
+            type: Boolean,
+            default: false
+        }
     }
 }
 </script>
