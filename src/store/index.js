@@ -4,13 +4,18 @@ import { createStore } from 'vuex'
 const store = createStore({
     state() {
         return {
-            title: "Salom hammaga"
+            title: "Salom hammaga",
+            send_confirm_code: false,
+            phone: ''
         }
     },
     mutations: {
-        // increment(state) {
-        //     state.count++
-        // }
+        ConfirmCode(state) {
+            state.send_confirm_code = !state.send_confirm_code
+        },
+        changePhoneNumber (state, phone) {
+            state.phone = phone;
+        }
     }
 });
 

@@ -16,6 +16,7 @@ button {
     border: none;
     outline: none;
     background: transparent;
+    cursor: pointer;
 }
 
 a {
@@ -50,6 +51,26 @@ input {
     &:active {
         background: #CDB700;
     }
+}
+
+.main_btn_disabled {
+    background: #262329 !important;
+    color: #979C9E !important;
+}
+
+.again_btn {
+    color: #C7FF24;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 auto;
+}
+
+.d-none {
+    display: none;
 }
 
 .link_text {
@@ -88,7 +109,7 @@ input {
 
         button {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 4px;
             height: 100%;
             cursor: pointer;
@@ -165,7 +186,7 @@ input {
             width: 100%;
             display: flex;
             flex-direction: column;
-            height: 320px;
+            height: 190px;
             padding-left: 5px;
 
             &::-webkit-scrollbar {
@@ -215,10 +236,160 @@ input {
     }
 
     .countries_wrapper.active {
-        height: 400px;
+        height: 270px;
         border: 1px solid #E3E5E5;
     }
 
+    .select_mask {
+        border-radius: 8px;
+        background: #FFF;
+        position: absolute;
+        margin-top: 5px;
+        overflow: hidden;
+        transition: .3s ease all;
+        width: 100%;
+        padding: 10px 0;
+
+        button {
+            padding: 5px 15px;
+            color: #090A0A;
+            font-family: "Rubik", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 135%;
+            width: 100%;
+            text-align: left;
+            
+            &:hover {
+                background: #E3E5E5;
+            }
+        }
+    }
+}
+
+.confirm_inputs {
+    display: flex;
+    max-width: 335px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    input {
+        border-radius: 12px;
+        background: #262329;
+        border: 1px solid #262329;
+        width: 48px;
+        height: 48px;
+        color: #FFF;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+
+        &:focus {
+            border: 1px solid #C7FF24 !important;
+        }
+    }
+    
+    input.active {
+        border: 1px solid #FFF;
+    }
+}
+
+.input_wrapper {
+    position: relative;
+
+    input {
+        border-radius: 8px;
+        border: 1px solid #E3E5E5;
+        background: #FFF;
+        height: 54px;
+        width: 100%;
+        color: #090A0A;
+        font-family: "Rubik", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        padding: 16px;
+        padding-top: 30px;
+    }
+
+    label {
+        color: #72777A;
+        font-family: "Rubik", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        transition: .2s ease all;
+    }
+
+    input:focus + label,
+    label.active{
+        font-size: 14px;
+        top: 9px;
+    }
+}
+
+@mixin link_text_wrapper {
+    .link_text_wrapper {
+        margin: 50px 0 16px;
+        max-width: 335px;
+        display: flex;
+        justify-content: center;
+
+        button {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+
+            span {
+                color: #C7FF24;
+                font-family: "Rubik", sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+
+    .identifiction_title {
+        max-width: 327px;
+        color: #FFF;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 135%;
+        letter-spacing: 0.4px;
+        margin-bottom: 16px;
+    }
+
+    .identifiction_description {
+        max-width: 327px;
+        color: #A6A4B4;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        margin-bottom: 30px;
+
+        span {
+            color: #FFF;
+        }
+    }
 }
 
 .auth_wrapper {
@@ -331,6 +502,88 @@ input {
 
             .main_btn {
                 width: 335px;
+            }
+
+            .identifiction {
+                @include link_text_wrapper();
+
+                .main_btn {
+                    max-width: 335px;
+                    margin: 50px 0 31px;
+                }
+            }
+        }
+
+        .register {
+            .step_head {
+                width: 335px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+                margin: 50px 0;
+
+                .step_head_item {
+                    border-radius: 2px;
+                    background: #3B363F;
+                    height: 4px;
+                    width: calc(100%);
+                }
+
+                .step_head_item.active {
+                    background: #C7FF24;
+                }
+            }
+
+            .step {
+                display: none;
+            }
+
+            .step.active {
+                display: block;
+            }
+
+            .step_1 {
+                .title {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Rubik", sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 135%;
+                    letter-spacing: 0.4px;
+                    margin-bottom: 30px;
+                }
+
+                .inputs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    margin-bottom: 50px;
+                }
+
+                .main_btn {
+                    width: 100%;
+                }
+            }
+
+            .step_2 {
+                @include link_text_wrapper();
+
+                .main_btn {
+                    width: 100%;
+                    margin: 50px 0 31px;
+                }
+            }
+
+            .step_3 {
+                @include link_text_wrapper();
+
+                .main_btn {
+                    width: 100%;
+                    margin-top: 50px;
+                }
             }
         }
     }
