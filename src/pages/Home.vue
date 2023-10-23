@@ -5,6 +5,7 @@
         <div class="home_wrapper">
             <Profile />
             <PayModal />
+            <QRPay />
         </div>
         </div>
     </div>
@@ -14,11 +15,13 @@
 import Header from "../components/Header.vue";
 import Profile from "../components/Profile.vue";
 import PayModal from "../components/PayModal.vue";
+import QRPay from '../components/QRPay.vue';
 export default {
     components: {
         Header,
         Profile,
-        PayModal
+        PayModal,
+        QRPay
     }
 }
 </script>
