@@ -5,9 +5,33 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e-wallet</title>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#date-range-picker").daterangepicker({
+          opens: 'center',
+          alwaysShowCalendars: false,
+          showCustomRangeLabel: true,
+          // ranges: {
+          //   'Today': [moment(), moment()],
+          //   'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          //   'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          //   'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          //   'This Month': [moment().startOf('month'), moment().endOf('month')],
+          //   'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          // }
+        });
+      })
+    </script>
   </body>
 </html>

@@ -7,6 +7,7 @@ const store = createStore({
             title: "Salom hammaga",
             send_confirm_code: false,
             phone: ''
+        }
     },
     mutations: {
         ConfirmCode(state) {

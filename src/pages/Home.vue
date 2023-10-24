@@ -1,27 +1,23 @@
 <template>
-    <div class="home">   
-        <div class="main_container">
-        <Header />
-        <div class="home_wrapper">
-            <Profile />
-            <PayModal />
-            <QRPay />
-        </div>
-        </div>
+    <div class="home">
+        <WalletList />
+        <Payment />
+        <div class="title">Транкзации</div>
+        <Transactions />
     </div>
 </template>
 
 <script>
-import Header from "../components/Header.vue";
-import Profile from "../components/Profile.vue";
-import PayModal from "../components/PayModal.vue";
-import QRPay from '../components/QRPay.vue';
+import WalletList from "../components/WalletList.vue"
+import Payment from '../components/Payment.vue'
+import Transactions from '../components/Transactions.vue'
+
 export default {
+    name: "Home",
     components: {
-        Header,
-        Profile,
-        PayModal,
-        QRPay
+        WalletList,
+        Payment,
+        Transactions,
     }
 }
 </script>
